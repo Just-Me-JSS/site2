@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 7 — JavaScript</title>
+</head>
+<body>
+
+    <h1>Демонстрация JavaScript</h1>
+    <p>Результаты вычислений:</p>
+    <div id="output" style="font-size: 18px; font-weight: bold;"></div>
+
+    <script>
+const a = 5;
+const b = 7;
+
+let sumResult = a + b;
+let mulResult = a * b;
+let compare = a < b;
+
+
+function sum(x, y) {
+    return x + y;
+}
+
+const multiply = (x, y) => x * y;
+
+
+console.log("a =", a);
+console.log("b =", b);
+console.log("Обычная функция sum(a, b) =", sum(a, b));
+console.log("Стрелочная функция multiply(a, b) =", multiply(a, b));
+console.log("Сравнение a < b =", compare);
+
+
+document.getElementById("output").innerHTML =
+    "Сумма a + b = " + sumResult +
+    "<br>Умножение a × b = " + mulResult +
+    "<br>Сравнение a < b: " + compare;
+</script>
+</body>
+</html>
